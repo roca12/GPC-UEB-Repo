@@ -1,45 +1,30 @@
 /*
 * Autor: pgms1103-afk
-* Problema: Formados en la cafetería
-* Juez Online: omegaUp
+* Problema: 4A - Watermelon
+* Juez Online: Codeforces
 * Veredicto: Accepted
-* URL: https://omegaup.com/arena/problem/Formados-en-la-cafeteria/#problems
+* URL: https://codeforces.com/problemset/problem/4/A
 */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Main {
 
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 
-		int t = Integer.parseInt(br.readLine());
-		Queue<String> alumnos = new LinkedList<>();
-		Queue<String> trabajadores = new LinkedList<>();
-		for (int i = 0; i < t; i++) {
-			
-			String evento = br.readLine();
+		int w = Integer.parseInt(br.readLine());
 
-
-			if (evento.contains("ALUMNO")) {
-				String nombreAlumno = evento.substring(13);
-				alumnos.offer(nombreAlumno);
-			} else if (evento.contains("TRABAJADOR")) {
-				String nombreTrabajador = evento.substring(17);
-				trabajadores.offer(nombreTrabajador);
-			}else {
-				if(trabajadores.isEmpty()){
-					String estudianteAtendido = alumnos.poll();
-					System.out.println(estudianteAtendido);
-				}else {
-					String trabajadorAtendido = trabajadores.poll();
-					System.out.println(trabajadorAtendido);
-				}
-			}
+		if (w<=2){
+			System.out.println("NO");
+		}
+		else if (w % 2 == 0) {
+			System.out.print("YES");
+		} else {
+			System.out.print("NO");
 		}
 
 	}
