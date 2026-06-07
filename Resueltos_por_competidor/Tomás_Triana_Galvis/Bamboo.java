@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * Veredicto: Accepted
  * Url: https://lightoj.com/problem/the-monkey-and-the-oiled-bamb
  **/ 
-public class Bamboo2 {
+public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine()); 
