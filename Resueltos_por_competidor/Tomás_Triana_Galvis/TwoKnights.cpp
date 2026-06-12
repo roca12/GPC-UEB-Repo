@@ -18,6 +18,6 @@ int main()
         k = i*i;
         cout<<((k*(k-1))/2)-4*(i-2)*(i-1)<<endl;
     }
-
+    return 0;
 
 }
