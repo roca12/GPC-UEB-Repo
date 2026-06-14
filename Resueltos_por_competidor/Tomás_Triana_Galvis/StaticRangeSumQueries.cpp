@@ -22,5 +22,5 @@ int main(){
         cin>>a>>b;
         cout<<ans[b]-ans[a-1]<<endl;
     }
-
+    return 0;
 }
