@@ -1,6 +1,6 @@
 /*
  * Autor: Juan Diego Gonzalez Villarreal
- * Problema: Leap Frog
+ * Problema: Brownian Bears
  * Juez online: RPC
  * Veredicto: Accepted
  * URL:
@@ -9,13 +9,14 @@
 #define vi vector<int>
 using namespace std;
 
-void clean(string &s){
+string clean(string &s){
     string tmp;
     for(char &c: s){
-        tolower(c);
-        if(c<97 && c>122) continue;
+        if(c>=65 && c<=90)c+=32;
+        if(c<97 || c>122) continue;
         tmp+=c;
     }
+    return tmp;
 }
 
 void encrypt(int d, string &s,string &ns, char dir, int &pos){
@@ -51,6 +52,7 @@ void decrypt(int d, string &s,string &ns, char dir){
         for(int i = s.size()-1; i>=0; i--){
             if(cnt%d==0 && s[i]!='_'){
                 ns+=s[i];
+                s[i]='_';
                 cnt++;
             }else if(s[i]!='_') cnt++;
         }
@@ -65,27 +67,33 @@ vi toKey(string &s){
 
 int main(){
     string t,key,text,ns;
-    cin>>t>>key>>text;
-    for(int i = 0; i<text.size(); i++) ns+='_';
+    cin>>t>>key;
+    cin.ignore();
+    getline(cin, text);
     vi keys = toKey(key);
     int pos = 0;
     char d = 'r';
     if(t=="E"){
-        clean(text);
+        string s = clean(text);
+        for(int i = 0; i<s.size(); i++) ns+='_';
         for(int i = 0; i<keys.size(); i++){
             if(i%2==0){
-                encrypt(keys[i], text,ns,d,pos);
+                encrypt(keys[i], s,ns,d,pos);
                 d='l';
             }
             else{
-                encrypt(keys[i], text,ns,d,pos);
+                encrypt(keys[i], s,ns,d,pos);
                 d='r';
             }
         }
-        d = (d=='r')? 'l':'r';
-        
-        for(int i = 0;i<ns.size(); i++){
-            if(ns[i] == '_')ns[i] = text[pos++];
+        if(d=='r'){
+            for(int i = 0;i<ns.size(); i++){
+                if(ns[i] == '_')ns[i] = s[pos++];
+            }
+        }else{
+            for(int i = ns.size()-1;i>=0; i--){
+                if(ns[i] == '_')ns[i] = s[pos++];
+            }
         }
     }else{
          for(int i = 0; i<keys.size(); i++){
@@ -98,10 +106,16 @@ int main(){
                 d='r';
             }
          }
-         d = (d=='r')? 'l':'r';
-         for(int i = 0;i<ns.size(); i++){
-            if(text[i] != '_')ns[i] += text[i];
+         if(d=='r'){
+            for(int i = 0;i<text.size(); i++){
+                if(text[i] != '_')ns += text[i];
+            }
+         }else{
+            for(int i = text.size()-1;i>=0; i--){
+                if(text[i] != '_')ns += text[i];
+            }
          }
+         
     }
     cout<<ns<<"\n";
 }
