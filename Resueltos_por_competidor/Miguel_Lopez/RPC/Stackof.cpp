@@ -1,32 +1,21 @@
 /*
  * Autor: Miguel Lopez
- * Problema: Snakey String 
+ * Problema: A Stack of Gold 
  * Juez online: RPC
  * Veredicto: Accepted
- * Url:https://vjudge.net/problem/QOJ-16818
+ * Url:https://vjudge.net/problem/Kattis-astackofgold
  */
 
 #include <bits/stdc++.h>
 typedef long long int ll;
 using namespace std;
-int main()
-{
-    int a,b; scanf("%d %d", &a,&b);
-    vector<string> test(a);
-    string aver = "";
-    for(int i = 0; i < a; i++) {
-        cin >> test[i];
-    }
-    for(int i = 0; i < b; i++) {
-        for(int j = 0; j < a;  j++) {
-            if(test[j][i] != '.')
-            {
-                aver+=test[j][i];
-                break;
-            }
-        }
-    }
-    cout << aver << endl;
+
+int main() {
+    init_code();
+    ll w,s; scanf("%lld %lld", &w,&s);
+    ll c = (s*(s+1))/2;
+    ll base = c * 29260;
+    ll differe = w - base;
+    printf("%lld\n", differe / 110);
     return 0;
 }
-
