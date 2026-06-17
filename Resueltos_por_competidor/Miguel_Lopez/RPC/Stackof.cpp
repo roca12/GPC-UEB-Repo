@@ -6,6 +6,10 @@
  * Url: https://vjudge.net/problem/Kattis-astackofgold
  */
 
+#include <bits/stdc++.h>
+typedef long long int ll;
+using namespace std;
+
 int main() {
     ll w,s; scanf("%lld %lld", &w,&s);
     ll c = (s*(s+1))/2;
