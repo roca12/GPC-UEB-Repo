@@ -1,6 +1,6 @@
 /*
  * Autor: Miguel Lopez
- * Problema: 	Leapfrog Encryption 
+ * Problema: Helpfull Maths
  * Juez online: CodeForces
  * Veredicto: Accepted
  * Url: https://codeforces.com/problemset/problem/339/A
