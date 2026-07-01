@@ -9,9 +9,8 @@
 
 import java.util.*;
 
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
+public class CHRISTGREET{
+    	public static void main (String[] args){
 	    int X;
 	    Scanner sc = new Scanner (System.in);
 	    X = sc.nextInt();
