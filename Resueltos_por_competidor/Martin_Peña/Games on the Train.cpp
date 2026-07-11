@@ -1,9 +1,9 @@
 /*
 * Autor: pgms1103-afk
-* Problema: 2237A - Destroying Towers
+* Problema: 2236A - Games on the Train
 * Juez Online: Codeforces
 * Veredicto: Accepted
-* URL: https://codeforces.com/problemset/problem/2237/A
+* URL:  https://codeforces.com/problemset/problem/2236/A
 */
 #include <iostream>
 #include <bits/stdc++.h>
