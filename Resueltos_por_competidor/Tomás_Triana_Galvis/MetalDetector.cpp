@@ -4,7 +4,7 @@ using namespace std;
 /*
  * Autor: Tomás Triana Galvis
  * Problema: Metal Detector
- * Juez online: Codeforcesgym101064
+ * Juez online: Codeforcesgym101064F
  * Veredicto: Accepted
  * Url: https://codeforces.com/gym/101064/problem/F
  **/
