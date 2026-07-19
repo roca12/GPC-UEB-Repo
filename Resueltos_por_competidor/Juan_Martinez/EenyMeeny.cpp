@@ -1,5 +1,5 @@
 /*
- * Autor: Miguel Lopez
+ * Autor: EroMergeSort
  * Problema: Eeny Meeny
  * Juez online: Kattis
  * Veredicto: Accepted
