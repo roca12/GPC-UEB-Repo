@@ -14,7 +14,6 @@ int main(){
     string a;
     unordered_set<string> ans;
     cin>>t;
-    cin.ignore();
     while(t--){
         ans.clear();
         cin>>n>>m;
