@@ -8,7 +8,7 @@ public class Main {
 	/*
 	 * Autor: mariana 
 	 * Problema : 10887-Concatenation of Languages
-	 * Juez online: CodeForces
+	 * Juez online: OnlineJudge
 	 * Veredicto: Accepted 
 	 * URL: https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1828
 	 */
