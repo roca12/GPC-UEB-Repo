@@ -1,9 +1,9 @@
 /*
  * Autor: Juan Diego Gonzalez Villarreal
- * Problema:
- * Juez Online:
+ * Problema: Grass Planting
+ * Juez Online: USACO
  * Veredicto: Accepted
- * URL:
+ * URL: https://usaco.org/index.php?page=viewproblem2&cpid=894
  */
 
 #include <bits/stdc++.h>
@@ -27,17 +27,24 @@ typedef long long ll;
 #define ln "\n"
 using namespace std;
 
+vvi adj;
+
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
+  freopen("planting.in", "r", stdin);
+  freopen("planting.out", "w", stdout);
   int n;
   cin >> n;
-  vi pref(n + 1, 0);
-  for (int i = n - 1, val; i >= 0; i--) {
-    cin >> val;
-    pref[i] ^⁼ pref[i + 1];
+  adj.resize(n + 1, vi());
+  for (int i = 1, a, b; i < n; i++) {
+    cin >> a >> b;
+    adj[a].pb(b);
+    adj[b].pb(a);
   }
-  for(int i = 0; i<n; i++){
-    
+  int hi = 0;
+  for (int i = 1; i <= n; i++) {
+    hi = max(hi, (int)adj[i].size());
   }
+  cout << hi + 1;
 }
