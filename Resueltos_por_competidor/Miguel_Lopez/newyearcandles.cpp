@@ -30,7 +30,6 @@ int main() {
         int aux = quem/b;
         quem = aux + quem%b;
         tot+=aux;
-       // cout << quem << endl;
        // cout << quem << " " << quem/b << " " << tot << endl;
     }
     /* a = 4, b = 2, tot = 4, vel = a/b = 2, a-=b
