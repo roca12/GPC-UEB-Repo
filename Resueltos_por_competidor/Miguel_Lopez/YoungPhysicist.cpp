@@ -1,9 +1,9 @@
 /*
  * Autor: Miguel Lopez
- * Problema: Sale
- * Juez online: Codeforces
+ * Problema: Young Physicist
+ * Juez online: Codeforces 
  * Veredicto: Accepted
- * Url: https://codeforces.com/contest/34/problem/B
+ * Url: https://codeforces.com/contest/69/problem/A
  */
 
 #include <bits/stdc++.h>
@@ -23,17 +23,15 @@ void init_code() {
 }
 int main() {
     init_code();
-    int n,m; cin >> n >> m;
-    vector<int> prec;
-    for(int i = 0; i < n; i++) {
-        int z; cin >> z;
-        prec.push_back(z);
+    int t; cin >> t;
+    int conta = 0, contb = 0, contc = 0;
+    while(t--) {
+        int a,b,c; cin >> a >> b >> c;
+        conta+=a;
+        contb+=b;
+        contc+=c;
     }
-    sort(prec.begin(), prec.end());
-    int res = 0;
-    for(int i = 0; i < m; i++) {
-        if(prec[i] < 0) res+=(abs(prec[i]));
-        else break;
-    }
-    cout << res << endl;
+    string s = (conta == 0 && contb == 0 && contc == 0) ? "YES" : "NO";
+    cout << s << endl;
+
 }
