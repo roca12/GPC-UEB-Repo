@@ -1,13 +1,12 @@
 /*
  * Autor: Juan Diego Gonzalez Villarreal
- * Problema: Maximum Subarray Sum
+ * Problema: Forest Queries
  * Juez Online: CSES
  * Veredicto: Accepted
- * URL: https://cses.fi/problemset/task/1643
+ * URL: https://cses.fi/problemset/result/18239699/
  */
 
 #include <bits/stdc++.h>
-#include <climits>
 typedef long long ll;
 #define DBG(X) cerr << #X << ": " << (X) << endl
 #define mp make_pair
@@ -31,25 +30,21 @@ using namespace std;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  int n;
-  cin >> n;
-  vi prefix(n + 1, 0);
-  for (int i = 1, val; i <= n; i++) {
-    cin >> val;
-    prefix[i] = val + prefix[i - 1];
-  }
-  int hi = INT_MIN, idx;
-  for (int i = 1; i <= n; i++) {
-    hi = max(abs(prefix[i]), hi);
-    if (hi == abs(prefix[i])) {
-      idx = i;
+  int n, q, x1, y1, x2, y2;
+  cin >> n >> q;
+  vector<string> forest(n);
+  vvi pfx(n + 1, vi(n + 1, 0));
+  for (int i = 0; i < n; i++) {
+    cin >> forest[i];
+    for (int j = 0; j < n; j++) {
+      pfx[i + 1][j + 1] = (forest[i][j] == '*' ? 1 : 0) + pfx[i][j + 1] +
+                          pfx[i + 1][j] - pfx[i][j];
     }
   }
-  if (prefix[idx] > 0) {
-    int lo = INT_MAX;
-    for (int i = 1; i <= n; i++) {
-      lo = min(prefix[i], lo);
-    }
-  } else {
+  while (q--) {
+    cin >> y1 >> x1 >> y2 >> x2;
+    cout << pfx[y2][x2] - pfx[y2][x1 - 1] - pfx[y1 - 1][x2] +
+                pfx[y1 - 1][x1 - 1]
+         << ln;
   }
 }
