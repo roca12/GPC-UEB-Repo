@@ -1,6 +1,6 @@
 /* 
 Codeforces 546A - Soldier and Bananas
-https://codeforces.com/problemset/problem/266/A
+https://codeforces.com/problemset/problem/546/A
 */
 import java.util.Scanner;
 
