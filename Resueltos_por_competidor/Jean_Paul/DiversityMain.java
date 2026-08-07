@@ -1,9 +1,9 @@
 /*
  *  Autor: Jean Paul
- * Problema: A. ASCII Art Contest
+ * Problema: A. Diversity
  * Juez online: Polygon 
  * Veredicto: Accepted
- * URL: https://codeforces.com/problemset/problem/2172/A
+ * URL: https://codeforces.com/problemset/problem/844/A
  */
 
 import java.util.Arrays;
