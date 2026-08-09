@@ -1,7 +1,7 @@
 '''
 Autor: Alejandra Carvajal
 Problema: Concatenation of languages
-Juez Online: Codeforces
+Juez Online: UVA
 Veredicto: Accepted
 URL: https://vjudge.net/problem/UVA-10887
 '''
