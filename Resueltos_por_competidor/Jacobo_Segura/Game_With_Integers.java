@@ -2,7 +2,7 @@
 Codeforces 1899A - Game with Integers
 https://codeforces.com/problemset/problem/1899/A
 */
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
