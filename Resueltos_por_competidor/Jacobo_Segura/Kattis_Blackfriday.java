@@ -17,12 +17,10 @@ public class Main {
         	frecuencia.put(x, frecuencia.getOrDefault(x, 0)+1);
         }
         
-        int menor = Integer.MAX_VALUE;
         int elemento = 0;
         
         for(int x: frecuencia.keySet()) {
         	if(frecuencia.get(x) == 1 && x>elemento) {
-        		menor = frecuencia.get(x);
         		elemento = x;
         	}
         }
