@@ -1,3 +1,10 @@
+/*
+* Autor: pgms1103-afk
+* Problema: Message Route
+* Juez Online: CSES
+* Veredicto: Accepted
+* URL: https://cses.fi/problemset/task/1667
+*/
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
