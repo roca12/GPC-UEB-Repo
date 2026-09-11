@@ -1,11 +1,10 @@
 /*
 * Autor: pgms1103-afk
-* Problema: B. Two-gram
-* Juez Online: Codeforces
+* Problema: Building Roads
+* Juez Online: CSES
 * Veredicto: Accepted
-* URL: https://codeforces.com/contest/977/problem/B
+* URL: https://cses.fi/problemset/task/1666
 */
-//ESTA SIN SUBIRRRRRR
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
