@@ -4,9 +4,9 @@ using namespace std;
 /*
  * Autor: Tomás Triana Galvis
  * Problema: Fighting Fraud
- * Juez online: 
+ * Juez online: QOJ 19064
  * Veredicto: Accepted
- * Url: 
+ * Url: https://qoj.ac/problem/19064
  **/ 
 
 int main(){
