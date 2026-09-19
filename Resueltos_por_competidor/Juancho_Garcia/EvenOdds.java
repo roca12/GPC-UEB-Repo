@@ -1,3 +1,14 @@
+/*
+ * Autor: Juan Andres Garcia
+ * Problema: Even Odds
+ * Juez online: Codeforces
+ * Veredicto: Accepted
+ * Url: https://codeforces.com/problemset/problem/318/A
+ **/
+
+
+// lo intente con arreglos pero no vi ese 10 a la 12, nunca iba a entrar T_T
+
 import java.util.Scanner;
 
 public class EvenOdds {
