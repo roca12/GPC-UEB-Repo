@@ -1,3 +1,11 @@
+/*
+ * Autor: Juan Andres Garcia
+ * Problema: Queue at the School
+ * Juez online: Codeforces
+ * Veredicto: Accepted
+ * Url: https://codeforces.com/problemset/problem/266/B
+ **/
+
 import java.util.Scanner;
 
 public class QSchool {
