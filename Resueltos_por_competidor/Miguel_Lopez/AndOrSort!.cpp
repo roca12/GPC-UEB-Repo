@@ -1,9 +1,9 @@
 /*
  * Autor: Miguel Lopez
- * Problema: Three Piles
+ * Problema: AND, OR, Sort!
  * Juez online: Codeforces
  * Veredicto: Accepted
- * Url: https://codeforces.com/contest/2266/problem/B
+ * Url: https://codeforces.com/contest/2266/problem/C
  */
 
 #include <bits/stdc++.h>
@@ -21,6 +21,47 @@ void init_code() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif 
+}
+const ll INF = 1e9;
+int main() {
+    init_code();
+    int t; cin >> t;
+     while(t--){
+        int n; cin >> n;
+        string s; cin >> s;
+        if(s[0] == '1'){
+            ll ans = 0;
+            for(int i = 1; i < n; i++) {
+            if(s[i]=='0') ans++;
+            }
+            cout << ans << ln;
+        } else {
+            int aux = -1;
+            for(int i = 1; i < n; i++){
+                if(s[i]=='1') {
+                aux = i; break; 
+                } 
+            }
+            if(aux == -1){
+                cout << 0 << ln;
+                continue;
+            }
+            vector<int> prefix1(n+1, 0);
+            for(int i = 1; i <= n; i++) {
+                prefix1[i] = prefix1[i-1] + (s[i-1]=='1');
+            }
+
+            ll best = INF;
+            for(int k = aux; k <= n; k++){
+                ll ones = prefix1[k] - prefix1[0];
+                ll zeros = (n-k) - (prefix1[n]-prefix1[k]);
+                ll cost = ones + zeros;
+                best = min(best, cost);
+            }
+            cout << best << ln;
+        }
+    }
+}
 }
 int main() {
     init_code();
