@@ -1,3 +1,12 @@
+/*
+ * Autor: Juan Andres Garcia
+ * Problema: AutomaticAnswer
+ * Juez online: VJudge
+ * Veredicto: Accepted
+ * Url: https://vjudge.net/problem/UVA-11547
+ *  **/
+
+
 import java.util.Scanner;
 
 public class CorrenAnswer {
