@@ -1,0 +1,46 @@
+/*
+ * Autor: Samuel Lopez
+ * Problema: A. K Is Important
+ * Juez online: Polygon
+ * Veredicto: Accepted
+ * URL: https://codeforces.com/contest/2268/problem/A
+ */
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class KIsImportant {
+	
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		
+		
+		int t = sc.nextInt();
+		for (int i = 0; i < t; i++) {
+
+			int n = sc.nextInt();
+			int k = sc.nextInt(); 
+			long score = 0;
+			ArrayList<Integer> a = new ArrayList<>();
+			for (int j = 0; j < n; j++) {
+			a.add(sc.nextInt());
+			}
+				
+				while(a.size() >= k) {
+				long primero = a.get(k-1);
+				long segundo = a.get(a.size() - k);
+				if(primero >= segundo) {
+					score += primero;
+					a.remove(k - 1);
+				}else {
+					score += segundo;
+					a.remove(a.size() - k);
+				}
+			}
+			System.out.println(score);
+			
+		}
+	}
+
+}
